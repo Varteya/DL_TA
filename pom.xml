@@ -17,8 +17,7 @@
         <selenium.version>4.8.1</selenium.version>
         <testng.version>7.7.1</testng.version>
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
-
-        <domain></domain>
+        <slf4j.version>2.0.5</slf4j.version>
 
     </properties>
 
@@ -65,6 +64,16 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
     </dependencies>

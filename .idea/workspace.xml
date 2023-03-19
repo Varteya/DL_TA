@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59b0c7ab-fda7-4836-9822-a6faf67ac744" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/pages/LandingPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI_tests/landingPageSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI_tests/testCases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ApiTestsSuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/UiTestsSuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testData.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/CompositeElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/LoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/landingPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/testCases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/UiTestsSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/UiTestsSuite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +46,6 @@
     <option name="enabledProfiles">
       <list>
         <option value="UI_tests" />
-      </list>
-    </option>
-    <option name="disabledProfiles">
-      <list>
         <option value="API_tests" />
       </list>
     </option>
@@ -79,7 +72,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="UI_tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LandingPageTests.sample">
     <configuration name="DL_TA [clean,verify]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -106,6 +104,53 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="LandingPageTestCases.pageContainsLoginForm" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DL_TA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI_tests" />
+      <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTestCases" />
+      <option name="METHOD_NAME" value="pageContainsLoginForm" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LandingPageTests.sample" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DL_TA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI_tests" />
+      <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
+      <option name="METHOD_NAME" value="sample" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.DL_TA [clean,verify]" />
+      <item itemvalue="TestNG.LandingPageTestCases.pageContainsLoginForm" />
+      <item itemvalue="TestNG.LandingPageTests.sample" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LandingPageTests.sample" />
+        <item itemvalue="TestNG.LandingPageTestCases.pageContainsLoginForm" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,11 +160,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679229366036</updated>
-      <workItem from="1679229367264" duration="11218000" />
+      <workItem from="1679229367264" duration="22385000" />
     </task>
+    <task id="LOCAL-00001" summary="Draft">
+      <created>1679247909975</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679247909975</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draft" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI_tests/LandingPageTestCases.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 public class Browser {
 
     private WebDriver driver;
-
     private LandingPage landingPage;
 
     public Browser (WebDriver driver) {
@@ -14,21 +13,13 @@ public class Browser {
     }
 
     public LandingPage getLandingPage() {
-        if(landingPage == null) {
+        if (landingPage == null) {
             landingPage = new LandingPage(driver);
         }
         return landingPage;
     }
 
-    public String getURL(){
-        return driver.getCurrentUrl();
-    }
-
-    public WebDriver getDriver(){
-        return driver;
-    }
-
-    public void tearDown (){
+    public void tearDown() {
         driver.quit();
     }
 }

@@ -4,7 +4,7 @@
 <suite name = "UI suite">
     <test name="UiTests">
         <classes>
-            <class name="UI_tests.testCases"></class>
+            <class name="UI_tests.LandingPageTests"></class>
         </classes>
     </test>
 </suite>

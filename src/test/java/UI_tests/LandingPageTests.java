@@ -124,12 +124,20 @@ public class LandingPageTests extends LandingPageStepsImplementation {
         incorrectLoginDataMessageAppears();
     }
 
+    @Test
     public void verifyHeaderMenuLinks() {
+        openSite(landingPageUrl);
 
+        dataloreLinkShouldLeadToLandingPage();
+        dataloreLinkIsEnabled();
     }
 
+    @Test
     public void verifyFooterLinks() {
+        openSite(landingPageUrl);
 
+        footerLinksAreCorrect();
+        footerLinksAreEnabled();
     }
 
     @DataProvider

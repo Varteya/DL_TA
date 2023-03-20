@@ -1,9 +1,10 @@
 package UI_tests;
 
+import UI_tests.elements.FooterMenu;
+import UI_tests.elements.HeaderMenu;
 import UI_tests.elements.IncorrectLoginDataWarning;
 import UI_tests.elements.LoginForm;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +18,10 @@ public class BaseTest {
 
     protected IncorrectLoginDataWarning incorrectLoginDataWarning;
 
+    protected HeaderMenu headerMenu;
+
+    protected FooterMenu footerMenu;
+
 
 
     @BeforeMethod
@@ -26,6 +31,8 @@ public class BaseTest {
         landingPage = browser.getLandingPage();
         loginForm = landingPage.getLoginForm();
         incorrectLoginDataWarning = landingPage.getIncorrectLoginDataWarning();
+        headerMenu = landingPage.getHeaderMenu();
+        footerMenu = landingPage.getFooterMenu();
     }
 
     @AfterMethod

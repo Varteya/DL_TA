@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59b0c7ab-fda7-4836-9822-a6faf67ac744" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/FooterMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/HeaderMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/elements/IncorrectLoginDataWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/IncorrectLoginDataWarning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/elements/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
       <recent name="UI_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning">
+  <component name="RunManager" selected="TestNG.LandingPageTests">
     <configuration name="DL_TA [clean,verify]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -98,6 +100,23 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="LandingPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DL_TA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI_tests" />
+      <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LandingPageTests.verifyEmailOrPasswordIncorrectWarning" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DL_TA" />
       <extension name="coverage">
@@ -116,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LandingPageTests.verifyLoginFormAndSigningUpChangedByClickingOnTheLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LandingPageTests.verifyFooterLinks" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DL_TA" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +145,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="UI_tests" />
       <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
-      <option name="METHOD_NAME" value="verifyLoginFormAndSigningUpChangedByClickingOnTheLink" />
+      <option name="METHOD_NAME" value="verifyFooterLinks" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -134,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LandingPageTests.verifyLoginFormShownCorrectlyByDefault" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LandingPageTests.verifyHeaderMenuLinks" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DL_TA" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +163,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="UI_tests" />
       <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
-      <option name="METHOD_NAME" value="verifyLoginFormShownCorrectlyByDefault" />
+      <option name="METHOD_NAME" value="verifyHeaderMenuLinks" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -170,39 +189,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LandingPageTests.verifyWarningMessageForIncorrectEmailFieldForForgottenPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DL_TA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UI_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UI_tests" />
-      <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
-      <option name="METHOD_NAME" value="verifyWarningMessageForIncorrectEmailFieldForForgottenPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Maven.DL_TA [clean,verify]" />
+      <item itemvalue="TestNG.LandingPageTests" />
       <item itemvalue="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning" />
-      <item itemvalue="TestNG.LandingPageTests.verifyLoginFormAndSigningUpChangedByClickingOnTheLink" />
-      <item itemvalue="TestNG.LandingPageTests.verifyLoginFormShownCorrectlyByDefault" />
+      <item itemvalue="TestNG.LandingPageTests.verifyFooterLinks" />
+      <item itemvalue="TestNG.LandingPageTests.verifyHeaderMenuLinks" />
       <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForEmptyEmailFieldInLoginForm" />
-      <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForIncorrectEmailFieldForForgottenPassword" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LandingPageTests" />
+        <item itemvalue="TestNG.LandingPageTests.verifyFooterLinks" />
+        <item itemvalue="TestNG.LandingPageTests.verifyHeaderMenuLinks" />
         <item itemvalue="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning" />
         <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForEmptyEmailFieldInLoginForm" />
-        <item itemvalue="TestNG.LandingPageTests.verifyLoginFormAndSigningUpChangedByClickingOnTheLink" />
-        <item itemvalue="TestNG.LandingPageTests.verifyLoginFormShownCorrectlyByDefault" />
-        <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForIncorrectEmailFieldForForgottenPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +215,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679229366036</updated>
-      <workItem from="1679229367264" duration="43000000" />
+      <workItem from="1679229367264" duration="46717000" />
     </task>
     <task id="LOCAL-00001" summary="Draft">
       <created>1679247909975</created>
@@ -237,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679305560128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Draft">
+      <created>1679311015229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679311015229</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,11 +262,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/UI_tests/LandingPageTestCases.java</url>
           <line>17</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,7 +1,6 @@
 package UI_tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -30,6 +29,10 @@ public class Browser {
 
     public WebDriverWait getWait() {
         return wait;
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 
     public void tearDown() {

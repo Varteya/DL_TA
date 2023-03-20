@@ -29,12 +29,6 @@ public class LandingPageStepsImplementation extends BaseTest {
         landingPage.openSite(url);
     }
 
-    protected void loginFormTitleIsCorrect(String expectedHeaderText) {
-        String actualHeaderText = loginForm.getLoginFormHeaderText();
-        Assert.assertEquals(actualHeaderText, expectedHeaderText);
-    }
-
-
     protected void switchToSingingUpForm() {
         if (loginForm.createAnAccountLinkVisibility()) {
             loginForm.createAnAccountLinkClick();
@@ -51,12 +45,12 @@ public class LandingPageStepsImplementation extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
 
         String actualHeaderText = loginForm.getLoginFormHeaderText();
-        softAssert.assertEquals(actualHeaderText,LOGGING_IN_FORM_HEADER);
-        softAssert.assertTrue(loginForm.createAnAccountLinkVisibility());
-        softAssert.assertTrue(loginForm.emailInputVisibility());
-        softAssert.assertTrue(loginForm.passwordInputVisibility());
-        softAssert.assertTrue(loginForm.loginButtonVisibility());
-        softAssert.assertTrue(loginForm.forgotYourPasswordButtonVisibility());
+        softAssert.assertEquals(actualHeaderText,LOGGING_IN_FORM_HEADER, "header");
+        softAssert.assertTrue(loginForm.createAnAccountLinkVisibility(), "create an account link");
+        softAssert.assertTrue(loginForm.emailInputVisibility(), "email input");
+        softAssert.assertTrue(loginForm.passwordInputVisibility(), "password input");
+        softAssert.assertTrue(loginForm.loginButtonVisibility(), "login button");
+        softAssert.assertTrue(loginForm.forgotYourPasswordButtonVisibility(), "forgot password button");
 
         softAssert.assertAll();
     }
@@ -64,8 +58,8 @@ public class LandingPageStepsImplementation extends BaseTest {
     protected void specialSigningUpOptionsAreNotVisible() {
         SoftAssert softAssert = new SoftAssert();
 
-        softAssert.assertFalse(loginForm.logInHereLinkVisibility());
-        softAssert.assertFalse(loginForm.createAccountButtonVisibility());
+        softAssert.assertFalse(loginForm.logInHereLinkVisibility(), "log in here link");
+        softAssert.assertFalse(loginForm.createAccountButtonVisibility(), "create an account button");
 
         softAssert.assertAll();
     }
@@ -74,11 +68,11 @@ public class LandingPageStepsImplementation extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
 
         String actualHeaderText = loginForm.getLoginFormHeaderText();
-        softAssert.assertEquals(actualHeaderText, SIGNING_UP_FORM_HEADER);
-        softAssert.assertTrue(loginForm.logInHereLinkVisibility());
-        softAssert.assertTrue(loginForm.emailInputVisibility());
-        softAssert.assertTrue(loginForm.passwordInputVisibility());
-        softAssert.assertTrue(loginForm.createAccountButtonVisibility());
+        softAssert.assertEquals(actualHeaderText, SIGNING_UP_FORM_HEADER, "header");
+        softAssert.assertTrue(loginForm.logInHereLinkVisibility(), "log in here link");
+        softAssert.assertTrue(loginForm.emailInputVisibility(), "email input");
+        softAssert.assertTrue(loginForm.passwordInputVisibility(), "password input");
+        softAssert.assertTrue(loginForm.createAccountButtonVisibility(), "create account button");
 
         softAssert.assertAll();
     }
@@ -88,7 +82,7 @@ public class LandingPageStepsImplementation extends BaseTest {
 
         softAssert.assertFalse(loginForm.createAnAccountLinkVisibility(), "create an account link");
         softAssert.assertFalse(loginForm.loginButtonVisibility(), "log in button");
-        softAssert.assertFalse(loginForm.forgotYourPasswordButtonVisibility(), "forgot your passwprd");
+        softAssert.assertFalse(loginForm.forgotYourPasswordButtonVisibility(), "forgot your password");
 
         softAssert.assertAll();
     }
@@ -127,6 +121,43 @@ public class LandingPageStepsImplementation extends BaseTest {
 
     protected void incorrectLoginDataMessageAppears() {
         Assert.assertTrue(landingPage.getIncorrectLoginDataWarning().alertMessageVisibility(browser.getWait()));
+    }
+
+    protected void dataloreLinkShouldLeadToLandingPage() {
+        String actualLink = headerMenu.dataloreLinkHref();
+        Assert.assertTrue(actualLink.equals(landingPageUrl) ||
+                (actualLink.equals("") && browser.getCurrentUrl().equals(landingPageUrl)));
+    }
+
+    protected void dataloreLinkIsEnabled() {
+        Assert.assertTrue(headerMenu.dataloreLinkIsEnabled());
+    }
+
+    protected void footerLinksAreCorrect() {
+        SoftAssert softAssert = new SoftAssert();
+
+        String expectedSupportHref = properties.getProperty("supportUrl");
+        String expectedDocumentationHref = properties.getProperty("documentationUrl");
+        String expectedCommunityForumHref = properties.getProperty("communityForumUrl");
+        String expectedBlogHref = properties.getProperty("blogUrl");
+
+        softAssert.assertEquals(footerMenu.getSupportLinkHref(), expectedSupportHref, "support href");
+        softAssert.assertEquals(footerMenu.getDocumentationLinkHref(), expectedDocumentationHref, "documentation href");
+        softAssert.assertEquals(footerMenu.getCommunityForumLinkHref(), expectedCommunityForumHref, "community forum href");
+        softAssert.assertEquals(footerMenu.getBlogLinkHref(), expectedBlogHref, "blog");
+
+        softAssert.assertAll();
+    }
+
+    protected void footerLinksAreEnabled() {
+        SoftAssert softAssert = new SoftAssert();
+
+        softAssert.assertTrue(footerMenu.supportLinkIsEnabled(), "support");
+        softAssert.assertTrue(footerMenu.documentationLinkIsEnabled(), "documentation");
+        softAssert.assertTrue(footerMenu.communityForumLinkIsEnabled(), "community forum");
+        softAssert.assertTrue(footerMenu.blogLinkIsEnabled(), "blog");
+
+        softAssert.assertAll();
     }
 
 }

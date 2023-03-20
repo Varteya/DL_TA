@@ -109,8 +109,19 @@ public class LandingPageTests extends LandingPageStepsImplementation {
         emailInvalidWarningIsDisplayed();
     }
 
+    @Test
     public void verifyEmailOrPasswordIncorrectWarning() {
+        String notRegisteredEmail = "sleeping@in.the";
+        String notValidPassword = "coldBel0w";
 
+        openSite(landingPageUrl);
+
+        switchToLoggingInForm();
+        setValueToEmailInput(notRegisteredEmail);
+        setValueToPasswordInput(notValidPassword);
+        clickOnLogInButton();
+
+        incorrectLoginDataMessageAppears();
     }
 
     public void verifyHeaderMenuLinks() {

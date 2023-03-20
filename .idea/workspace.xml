@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59b0c7ab-fda7-4836-9822-a6faf67ac744" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/IncorrectLoginDataWarning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/LandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/elements/IncorrectLoginDataWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/IncorrectLoginDataWarning.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI_tests/elements/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI_tests/elements/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI_tests/LandingPageStepsImplementation.java" afterDir="false" />
@@ -74,7 +71,7 @@
       <recent name="UI_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LandingPageTests.verifyWarningMessageForEmptyEmailFieldInLoginForm">
+  <component name="RunManager" selected="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning">
     <configuration name="DL_TA [clean,verify]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -101,7 +98,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="LandingPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LandingPageTests.verifyEmailOrPasswordIncorrectWarning" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DL_TA" />
       <extension name="coverage">
         <pattern>
@@ -111,7 +108,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="UI_tests" />
       <option name="MAIN_CLASS_NAME" value="UI_tests.LandingPageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="verifyEmailOrPasswordIncorrectWarning" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -192,7 +190,7 @@
     </configuration>
     <list>
       <item itemvalue="Maven.DL_TA [clean,verify]" />
-      <item itemvalue="TestNG.LandingPageTests" />
+      <item itemvalue="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning" />
       <item itemvalue="TestNG.LandingPageTests.verifyLoginFormAndSigningUpChangedByClickingOnTheLink" />
       <item itemvalue="TestNG.LandingPageTests.verifyLoginFormShownCorrectlyByDefault" />
       <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForEmptyEmailFieldInLoginForm" />
@@ -200,11 +198,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LandingPageTests.verifyEmailOrPasswordIncorrectWarning" />
         <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForEmptyEmailFieldInLoginForm" />
         <item itemvalue="TestNG.LandingPageTests.verifyLoginFormAndSigningUpChangedByClickingOnTheLink" />
         <item itemvalue="TestNG.LandingPageTests.verifyLoginFormShownCorrectlyByDefault" />
         <item itemvalue="TestNG.LandingPageTests.verifyWarningMessageForIncorrectEmailFieldForForgottenPassword" />
-        <item itemvalue="TestNG.LandingPageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679229366036</updated>
-      <workItem from="1679229367264" duration="37679000" />
+      <workItem from="1679229367264" duration="43000000" />
     </task>
     <task id="LOCAL-00001" summary="Draft">
       <created>1679247909975</created>
@@ -232,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679264423086</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Draft">
+      <created>1679305560128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679305560128</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

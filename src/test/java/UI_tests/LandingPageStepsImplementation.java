@@ -125,4 +125,8 @@ public class LandingPageStepsImplementation extends BaseTest {
         loginForm.forgotYourPasswordButtonClick();
     }
 
+    protected void incorrectLoginDataMessageAppears() {
+        Assert.assertTrue(landingPage.getIncorrectLoginDataWarning().alertMessageVisibility(browser.getWait()));
+    }
+
 }

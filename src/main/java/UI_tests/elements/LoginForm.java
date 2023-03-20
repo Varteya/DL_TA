@@ -92,7 +92,7 @@ public class LoginForm extends CompositeElement {
     }
 
     public void passwordInputSetValue(String value) {
-        emailInput.clear();
+        passwordInput.clear();
         passwordInput.sendKeys(value);
     }
 

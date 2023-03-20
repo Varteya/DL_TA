@@ -23,6 +23,8 @@
         <maven.surefare.plugin.version>3.0.0-M4</maven.surefare.plugin.version>
         <allure.version>2.21.0</allure.version>
         <allure-maven.version>2.10.0</allure-maven.version>
+        <rest-assured.version>5.3.0</rest-assured.version>
+        <jackson-version>2.10.3</jackson-version>
 
     </properties>
 
@@ -34,7 +36,6 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-<!--                <include.tests>src/test/java/UI_tests/LandingPageTests.java</include.tests>-->
                 <suite.xml>src/test/resources/UiTestsSuite.xml</suite.xml>
             </properties>
         </profile>
@@ -45,7 +46,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>src/test/resources/ApiTestsSuite.xml</suite.xml>
+                <suite.xml>src/test/resources/api/ApiTestsSuite.xml</suite.xml>
             </properties>
         </profile>
 
@@ -87,6 +88,23 @@
 <!--            <version>${allure.version}</version>-->
 <!--            <scope>test</scope>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
 
     </dependencies>
 

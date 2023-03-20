@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
 
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
@@ -18,6 +20,9 @@
         <testng.version>7.7.1</testng.version>
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
         <slf4j.version>2.0.5</slf4j.version>
+        <maven.surefare.plugin.version>3.0.0-M4</maven.surefare.plugin.version>
+        <allure.version>2.21.0</allure.version>
+        <allure-maven.version>2.10.0</allure-maven.version>
 
     </properties>
 
@@ -29,6 +34,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
+<!--                <include.tests>src/test/java/UI_tests/LandingPageTests.java</include.tests>-->
                 <suite.xml>src/test/resources/UiTestsSuite.xml</suite.xml>
             </properties>
         </profile>
@@ -75,7 +81,50 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-testng</artifactId>-->
+<!--            <version>${allure.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefare.plugin.version}</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <xmlFile>${suite.xml}</xmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.source.version}</source>
+                    <target>${java.target.version}</target>
+                </configuration>
+            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>io.qameta.allure</groupId>-->
+<!--                <artifactId>allure-maven</artifactId>-->
+<!--                <version>${allure-maven.version}</version>-->
+<!--                <configuration>-->
+<!--                    <reportVersion>${allure.version}</reportVersion>-->
+<!--                    <resultsDirectory>${project.basedir}/allure-results</resultsDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+        </plugins>
+    </build>
 
 </project>

@@ -8,19 +8,13 @@ public class LandingPage extends BasePage {
     private LoginForm loginForm;
 
 
-
     public LandingPage (WebDriver driver){
         super(driver);
         loginForm = new LoginForm(driver);
     }
 
-    public String getLoginFormHeaderText() {
-        return loginForm.getLoginFormHeaderText();
+    public LoginForm getLoginForm() {
+        return loginForm;
     }
-
-    public boolean createAnAccountLinkVisibility() {
-        return loginForm.createAnAccountLinkVisibility();
-    }
-
 
 }

@@ -140,6 +140,25 @@ public class LandingPageTests extends LandingPageStepsImplementation {
         footerLinksAreEnabled();
     }
 
+    @Test
+    public void verifyLoggingInWithCorrectEmail() {
+        openSite(landingPageUrl);
+
+        loginWithCredentials(USER_LOGIN, USER_PASSWORD);
+        usersNotebooksPageIsOpened();
+    }
+
+    @Test
+    public void verifyCheckYourEmailForgottenPasswordNotification() {
+        String emailValue = "sleeping@in.the";
+        openSite(landingPageUrl);
+
+        setValueToEmailInput(emailValue);
+        clickOnForgotYourPasswordButton();
+
+        checkYourEmailForgottenPasswordNotification(emailValue);
+    }
+
     @DataProvider
     public Object[][] incorrectEmails() {
         return new Object[][] {

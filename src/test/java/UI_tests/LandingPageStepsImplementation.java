@@ -6,6 +6,7 @@ import org.testng.asserts.SoftAssert;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LandingPageStepsImplementation extends BaseTest {
 
@@ -22,6 +23,9 @@ public class LandingPageStepsImplementation extends BaseTest {
             e.printStackTrace();
         }
     }
+
+    protected static final String USER_LOGIN = System.getProperty("login");
+    protected static final String USER_PASSWORD = System.getProperty("password");
 
     protected final String landingPageUrl = properties.getProperty("url");
 
@@ -158,6 +162,30 @@ public class LandingPageStepsImplementation extends BaseTest {
         softAssert.assertTrue(footerMenu.blogLinkIsEnabled(), "blog");
 
         softAssert.assertAll();
+    }
+
+    protected void loginWithCredentials(String login, String password) {
+        loginForm.emailInputSetValue(login);
+        loginForm.passwordInputSetValue(password);
+
+        loginForm.logInButtonClick();
+    }
+
+    protected void usersNotebooksPageIsOpened() {
+        String userNotebooksLinkTail = "notebooks";
+        String expectedUrl = landingPageUrl + userNotebooksLinkTail;
+
+        browser.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
+        String actualUrl = browser.getCurrentUrl();
+
+        Assert.assertEquals(actualUrl, expectedUrl);
+    }
+
+    protected void checkYourEmailForgottenPasswordNotification(String email) {
+        String expectedNotificationText = "Check your email " + email + " for instructions.";
+
+        Assert.assertTrue(loginForm.checkYourEmailNotificationVisibility());
+        Assert.assertEquals(loginForm.getCheckYourEmailNotificationText(), expectedNotificationText);
     }
 
 }

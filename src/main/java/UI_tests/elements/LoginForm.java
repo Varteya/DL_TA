@@ -41,6 +41,8 @@ public class LoginForm extends CompositeElement {
     @FindBy(xpath = "//*[@class ='landing__login-form']//button[contains(text(), 'Forgot your password')]")
     private WebElement forgotYourPasswordButton;
 
+    @FindBy(xpath = "//*[@class='landing__login-form']//*[contains(text(), 'Check your email')]")
+    private WebElement checkYourEmailNotification;
 
     public LoginForm(WebDriver driver) {
         super(driver);
@@ -112,13 +114,20 @@ public class LoginForm extends CompositeElement {
         createAccountButton.click();
     }
 
-
     public boolean forgotYourPasswordButtonVisibility() {
         return isExist(forgotYourPasswordButton);
     }
 
     public void forgotYourPasswordButtonClick() {
         forgotYourPasswordButton.click();
+    }
+
+    public boolean checkYourEmailNotificationVisibility() {
+        return isExist(checkYourEmailNotification);
+    }
+
+    public String getCheckYourEmailNotificationText() {
+        return checkYourEmailNotification.getText();
     }
 
 }
